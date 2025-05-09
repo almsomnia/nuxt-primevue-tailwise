@@ -11,21 +11,30 @@ export default defineNuxtConfig({
    devtools: { enabled: true },
 
    css: [join(currentDir, "./assets/css/main.css")],
-   modules: ['@primevue/nuxt-module'],
+   modules: ["@primevue/nuxt-module", "@pinia/nuxt"],
+   components: [
+      {
+         path: join(currentDir, "./components"),
+         pathPrefix: false,
+      },
+   ],
+   imports: {
+      dirs: [join(currentDir, "./stores")]
+   },
 
    primevue: {
       options: {
          theme: {
             preset: preset,
             options: {
-               darkModeSelector: '.dark-mode',
+               darkModeSelector: ".dark-mode",
                cssLayer: {
                   name: "primevue",
-                  order: "theme, base, primevue"
-               }
-            }
-         }
-      }
+                  order: "theme, base, primevue",
+               },
+            },
+         },
+      },
    },
 
    vite: {
