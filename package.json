@@ -1,0 +1,34 @@
+{
+  "name": "nuxt-primevue-tailwise",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "./nuxt.config.ts",
+  "author": {
+    "name": "Riva Almero",
+    "email": "riva.alms@proton.me"
+  },
+  "scripts": {
+    "dev": "nuxi dev .playground",
+    "dev:prepare": "nuxt prepare .playground",
+    "build": "nuxt build .playground",
+    "generate": "nuxt generate .playground",
+    "preview": "nuxt preview .playground",
+    "format": "pnpm dlx prettier --write"
+  },
+  "devDependencies": {
+    "@primevue/nuxt-module": "^4.3.4",
+    "nuxt": "^3.17.2",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "typescript": "^5.8.3",
+    "vue": "latest"
+  },
+  "dependencies": {
+    "@primeuix/themes": "^1.1.1",
+    "@primevue/forms": "^4.3.4",
+    "@tailwindcss/vite": "^4.1.5",
+    "primevue": "^4.3.4",
+    "tailwindcss": "^4.1.5",
+    "tailwindcss-primeui": "^0.6.1"
+  }
+}
