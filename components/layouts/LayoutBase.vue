@@ -7,6 +7,8 @@ function resolveTheme(theme: Theme) {
       case "dagger":
          layout.value = h(resolveComponent("DaggerBase"))
          break
+      case "echo":
+         layout.value = h(resolveComponent("EchoBase"))
       default:
          break
    }
@@ -14,7 +16,10 @@ function resolveTheme(theme: Theme) {
 
 watch(
    () => theme.value,
-   (theme) => theme && resolveTheme(theme)
+   (theme) => theme && resolveTheme(theme),
+   {
+      immediate: true
+   }
 )
 </script>
 
