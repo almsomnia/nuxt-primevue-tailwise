@@ -21,3 +21,18 @@ declare interface FormattedMenu extends Menu {
 }
 
 declare type ExtractProps<T> = InstanceType<T>["$props"]
+
+type ProvideForceActiveMenu = (pageName: string) => void
+
+type Theme =
+   | "dagger"
+   | "echo"
+   | "exort"
+   | "havoc"
+   | "hook"
+   | "hurricane"
+   | "ravage"
+   | "raze"
+   | "razor"
+   | "shuriken"
+   | "viper"

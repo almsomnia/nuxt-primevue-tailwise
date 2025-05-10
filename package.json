@@ -16,8 +16,15 @@
     "format": "pnpm dlx prettier --write"
   },
   "devDependencies": {
+    "@nuxt/icon": "^1.12.0",
     "@primevue/nuxt-module": "^4.3.4",
+    "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
+    "@tailwindcss/postcss": "^4.1.6",
+    "autoprefixer": "^10.4.21",
     "nuxt": "^3.17.2",
+    "nuxt-headlessui": "^1.2.0",
+    "postcss-advanced-variables": "^5.0.0",
+    "postcss-nesting": "^13.0.1",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "^5.8.3",
@@ -27,9 +34,9 @@
     "@pinia/nuxt": "^0.11.0",
     "@primeuix/themes": "^1.1.1",
     "@primevue/forms": "^4.3.4",
-    "@tailwindcss/vite": "^4.1.5",
     "pinia": "^3.0.2",
     "primevue": "^4.3.4",
+    "simplebar": "^6.3.0",
     "tailwindcss": "^4.1.5",
     "tailwindcss-primeui": "^0.6.1"
   }

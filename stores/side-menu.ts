@@ -1,7 +1,12 @@
-export const useSideMenu = defineStore("side-menu", () => {
+export const useSideMenuStore = defineStore("side-menu", () => {
    const forceActiveMenu = ref<string>()
 
+   function setForceActiveMenu(pageName: string) {
+      forceActiveMenu.value = pageName
+   }
+
    const activeMobileMenu = ref(false)
+
    function findActiveMenu(subMenu: Menu[], route: Route) {
       let match = false
       subMenu.forEach((item) => {
@@ -91,6 +96,7 @@ export const useSideMenu = defineStore("side-menu", () => {
 
    return {
       forceActiveMenu,
+      setForceActiveMenu,
       activeMobileMenu,
       nestedMenu,
       linkTo,

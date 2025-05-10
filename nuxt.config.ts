@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { fileURLToPath } from "node:url"
 import { join, dirname } from "node:path"
-import tailwindcss from "@tailwindcss/vite"
 import { preset } from "./theme"
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
@@ -10,8 +9,18 @@ export default defineNuxtConfig({
    compatibilityDate: "2025-05-09",
    devtools: { enabled: true },
 
-   css: [join(currentDir, "./assets/css/main.css")],
-   modules: ["@primevue/nuxt-module", "@pinia/nuxt"],
+   css: [
+      join(currentDir, "./assets/css/main.css"),
+      join(currentDir, "./assets/css/components/global.css"),
+      join(currentDir, "./assets/css/vendors/simplebar.css"),
+      join(currentDir, "./assets/css/themes/dagger.css"),
+   ],
+   modules: [
+      "@primevue/nuxt-module",
+      "@pinia/nuxt",
+      "nuxt-headlessui",
+      "@nuxt/icon",
+   ],
    components: [
       {
          path: join(currentDir, "./components"),
@@ -19,7 +28,7 @@ export default defineNuxtConfig({
       },
    ],
    imports: {
-      dirs: [join(currentDir, "./stores")]
+      dirs: [join(currentDir, "./stores")],
    },
 
    primevue: {
@@ -37,7 +46,16 @@ export default defineNuxtConfig({
       },
    },
 
-   vite: {
-      plugins: [tailwindcss()],
+   headlessui: {
+      prefix: "Headless",
+   },
+
+   postcss: {
+      plugins: {
+         "@tailwindcss/nesting": {},
+         "@tailwindcss/postcss": {},
+         "postcss-advanced-variables": {},
+         autoprefixer: {},
+      },
    },
 })

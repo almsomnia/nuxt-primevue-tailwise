@@ -1,3 +1,9 @@
+<script setup lang="ts">
+provideHeadlessUseId(() => useId())
+</script>
+
 <template>
-   Hello World!
+   <LayoutBase>
+      <NuxtPage />
+   </LayoutBase>
 </template>
