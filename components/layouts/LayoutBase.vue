@@ -19,10 +19,7 @@ watch(
 </script>
 
 <template>
-   <!-- <component :is="layout">
+   <component :is="layout">
       <slot />
-   </component> -->
-   <DaggerBase>
-      <slot />
-   </DaggerBase>
+   </component>
 </template>

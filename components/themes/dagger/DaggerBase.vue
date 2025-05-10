@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import "@/assets/css/themes/dagger.css"
+import "@/assets/css/themes/dagger.css"
 import "@/assets/css/components/box.css"
 const compactMenu = useCompactMenuStore()
 </script>

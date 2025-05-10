@@ -13,7 +13,6 @@ export default defineNuxtConfig({
       join(currentDir, "./assets/css/main.css"),
       join(currentDir, "./assets/css/components/global.css"),
       join(currentDir, "./assets/css/vendors/simplebar.css"),
-      join(currentDir, "./assets/css/themes/dagger.css"),
    ],
    modules: [
       "@primevue/nuxt-module",
