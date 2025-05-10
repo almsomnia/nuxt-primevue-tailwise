@@ -4,13 +4,6 @@ const props = defineProps<{
 }>()
 
 const sideMenu = useSideMenuStore()
-
-function requestFullScreen() {
-   const el = document.documentElement
-   if (el.requestFullscreen) {
-      el.requestFullscreen()
-   }
-}
 </script>
 
 <template>

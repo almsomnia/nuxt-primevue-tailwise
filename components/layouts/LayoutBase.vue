@@ -9,6 +9,10 @@ function resolveTheme(theme: Theme) {
          break
       case "echo":
          layout.value = h(resolveComponent("EchoBase"))
+         break
+      case "exort":
+         layout.value = h(resolveComponent("ExortBase"))
+         break
       default:
          break
    }
