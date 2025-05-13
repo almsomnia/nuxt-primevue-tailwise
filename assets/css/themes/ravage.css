@@ -95,6 +95,7 @@
          &--active {
             .side-menu__link__icon {
                opacity: 1;
+               color: var(--color-white);
             }
             .side-menu__link__title {
                color: var(--color-primary-500);
