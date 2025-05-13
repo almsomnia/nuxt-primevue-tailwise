@@ -1,21 +1,21 @@
 <script setup lang="ts">
+type ThemeList = Array<{ theme: Theme, component: ReturnType<typeof h> }>
+
 const theme = useThemeStore()
 const layout = ref<ReturnType<typeof h>>(h(resolveComponent("DaggerBase")))
 
 function resolveTheme(theme: Theme) {
-   switch (theme) {
-      case "dagger":
-         layout.value = h(resolveComponent("DaggerBase"))
-         break
-      case "echo":
-         layout.value = h(resolveComponent("EchoBase"))
-         break
-      case "exort":
-         layout.value = h(resolveComponent("ExortBase"))
-         break
-      default:
-         break
+   const componentMap: ThemeList = [
+      { theme: "dagger", component: h(resolveComponent("DaggerBase")) },
+      { theme: "echo", component: h(resolveComponent("EchoBase")) },
+      { theme: "exort", component: h(resolveComponent("ExortBase")) },
+      { theme: "havoc", component: h(resolveComponent("HavocBase")) },
+   ]
+   const selectedTheme = componentMap.find((item) => item.theme === theme)
+   if (!selectedTheme) {
+      throw new Error("Theme not found")
    }
+   layout.value = selectedTheme.component
 }
 
 watch(

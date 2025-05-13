@@ -1,15 +1,15 @@
 export const useThemeStore = defineStore("theme", () => {
    const value = computed<Theme | null>(() => {
       if (import.meta.client) {
-         if (localStorage.getItem("theme") === null) {
-            localStorage.setItem("theme", "dagger")
+         if (localStorage.getItem("tw-theme") === null) {
+            localStorage.setItem("tw-theme", "dagger")
          }
       }
-      return localStorage.getItem("theme") as Theme
+      return localStorage.getItem("tw-theme") as Theme
    })
 
    function setTheme(theme: Theme) {
-      localStorage.setItem("theme", theme)
+      localStorage.setItem("tw-theme", theme)
    }
 
    return {
