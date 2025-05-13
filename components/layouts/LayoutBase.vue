@@ -16,6 +16,7 @@ function resolveTheme(theme: Theme) {
       { theme: "raze", component: h(resolveComponent("RazeBase")) },
       { theme: "razor", component: h(resolveComponent("RazorBase")) },
       { theme: "shuriken", component: h(resolveComponent("ShurikenBase")) },
+      { theme: "viper", component: h(resolveComponent("ViperBase")) },
    ]
    const selectedTheme = componentMap.find((item) => item.theme === theme)
    if (!selectedTheme) {
