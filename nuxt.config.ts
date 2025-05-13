@@ -17,8 +17,8 @@ export default defineNuxtConfig({
    modules: [
       "@primevue/nuxt-module",
       "@pinia/nuxt",
-      "nuxt-headlessui",
       "@nuxt/icon",
+      "@nuxt/fonts"
    ],
    components: [
       {
@@ -43,10 +43,6 @@ export default defineNuxtConfig({
             },
          },
       },
-   },
-
-   headlessui: {
-      prefix: "Headless",
    },
 
    postcss: {
